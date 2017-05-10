@@ -861,7 +861,7 @@ Xonomy.showBubble=function($anchor) {
 	var bubbleHeight = $bubble.outerHeight();
 	var width = $anchor.width(); if (width > 40) width = 40;
 	var height = $anchor.height(); if (height > 25) height = 25;
-	if (Xonomy.mode == "laic") { width = width - 25; height = height + 10; }
+	//if (Xonomy.mode == "laic") { width = width - 25; height = height + 10; }
 
 	function verticalPlacement() {
 		var top = "";
