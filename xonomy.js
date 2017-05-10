@@ -862,16 +862,16 @@ Xonomy.showBubble=function($anchor) {
 	var width = $anchor.width(); if (width > 40) width = 40;
 	var height = $anchor.height(); if (height > 25) height = 25;
 	//if (Xonomy.mode == "laic") { width = width - 25; height = height + 10; }
-
+    console.log(height);
 	function verticalPlacement() {
 		var top = "";
 		var bottom = "";
 		if (offset.top + height + bubbleHeight <= screenHeight) {
 			// enough space - open down
 			top = (offset.top + height) + "px";
-		} else if (screenHeight - offset.top + 5 + bubbleHeight > 0) {
-			// 5px above for some padding. Anchor using bottom so animation opens upwards.
-			bottom = (screenHeight - offset.top + 5) + "px";
+		} else if (offset.top + 10 > bubbleHeight) {
+			// Anchor using bottom so animation opens upwards.
+			bottom = (screenHeight - offset.top - 10) + "px";
 		} else {
 			// neither downwards nor upwards is enough space => center the bubble
 			top = (screenHeight - bubbleHeight)/2 + "px";
